@@ -17,12 +17,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "module": "esnext",
-    "plugins": [
-      {
-        "name": "next"
+      "module": "esnext",
+      "plugins": [
+        {
+          "name": "next"
+        }
+      ],
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["./*"]
       }
-    ]
   },
   "include": [
     "**/*.ts",

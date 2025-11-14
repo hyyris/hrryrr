@@ -1,12 +1,23 @@
-import './globals.css'
-import React from 'react'
+import type { Metadata } from 'next';
+import './globals.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata: Metadata = {
+  title: 'hrryrr',
+  description: 'Skeleton Next.js app',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-gray-50 text-slate-900">
-        <main className="max-w-4xl mx-auto p-6">{children}</main>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        <main className="min-h-screen flex items-center justify-center p-4">
+          {children}
+        </main>
       </body>
     </html>
-  )
+  );
 }

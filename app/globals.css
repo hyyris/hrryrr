@@ -1,1 +1,74 @@
-@import "../styles/globals.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+  /* Base surfaces */
+  --background: 0 0% 0%;
+  --foreground: 0 0% 20%;
+
+  /* Card tokens: stronger, turquoise-tinted surface */
+  --card: 174 64% 96%;
+  /* Darker neutral gray for stronger readability on the gradient */
+  --card-foreground: 215 25% 10%;
+
+  /* Muted / secondary text */
+  /* Darker muted text to increase contrast on the card */
+  --muted-foreground: 215 12% 28%;
+
+  /* Turquoise brand color */
+  --primary: 174 84% 45%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Borders & rings leaning on turquoise */
+  --border: 174 70% 85%;
+  --ring: 174 84% 45%;
+
+  /* Radii (medium, shadcn-like) */
+  --radius: 0.75rem;
+  }
+
+  body {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .card-root {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    padding-inline: 0.5rem;
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border: 2px solid hsl(270 84% 52%);
+    /* Strong floating shadow with a subtle turquoise ambient */
+    box-shadow:
+      0 24px 48px -12px rgba(0, 0, 0, 0.6),
+      0 12px 28px -12px hsl(174 96% 58% / 0.25);
+    --foreground: hsl(var(--card-foreground));
+    background-image: radial-gradient(
+      circle at 50% 52%,
+      hsl(270 84% 88%) 0%,
+      hsl(230 88% 86%) 35%,
+      hsl(196 92% 72%) 70%,
+      hsl(174 96% 58%) 100%
+    );
+  }
+}
+
+.button-spinner {
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: transparent;
+  border-top-color: currentColor;
+  width: 1rem;
+  height: 1rem;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
