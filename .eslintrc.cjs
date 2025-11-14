@@ -1,0 +1,16 @@
+module.exports = {
+  root: true,
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+    ecmaFeatures: { jsx: true }
+  },
+  env: { browser: true, node: true, es2021: true },
+  plugins: ['@typescript-eslint', 'react'],
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  rules: {
+    'react/react-in-jsx-scope': 'off'
+  },
+  settings: { react: { version: 'detect' } }
+}
