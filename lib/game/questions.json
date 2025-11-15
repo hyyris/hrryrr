@@ -462,14 +462,14 @@
         },
         {
           "id": "b",
-          "text": "Try but fail",
+          "text": "Overthink it and do nothing",
           "consequence": "People moved on. You are yesterday’s meme.",
-          "delta": -20,
+          "delta": 0,
           "next": "q13"
         },
         {
           "id": "c",
-          "text": "Ruin reputation",
+          "text": "Post an edgy follow‑up for clout",
           "consequence": "Yikes. You get cancelled for something you don’t remember doing.",
           "delta": -200,
           "next": "q16"
