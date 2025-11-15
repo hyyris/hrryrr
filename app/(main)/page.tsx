@@ -19,9 +19,10 @@ export default function HomePage() {
   const [question, setQuestion] = useState<null | {
     id: string;
     text: string;
-    options: { id: string; text: string; delta: number; nextToken: string }[];
+    options: { id: string; text: string; delta: number; nextToken: string; consequence?: string }[];
     isLast: boolean;
   }>(null);
+  const [lastConsequence, setLastConsequence] = useState<string | null>(null);
   const [selections, setSelections] = useState<Array<{ questionId: string; optionId: string; delta: number }>>([]);
   const moodAnimRef = useRef<number | null>(null);
   const moodJitterRef = useRef<number | null>(null);
@@ -101,7 +102,10 @@ export default function HomePage() {
         <Card>
           <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>
           <CardHeader>
-            <CardTitle>{question ? 'Question' : 'hrryrr'}</CardTitle>
+            <CardTitle>{question ? '' : ''}</CardTitle>
+            {question && lastConsequence && (
+              <p className="text-sm text-muted-foreground font-medium">{lastConsequence}</p>
+            )}
             <CardDescription>
               {question ? question.text : ''}
             </CardDescription>
@@ -127,6 +131,7 @@ export default function HomePage() {
             const opt = question.options[0];
             setMoney((m) => m + opt.delta);
             setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+            setLastConsequence(opt.consequence || null);
             setToken(opt.nextToken);
           }}
           onSecondary={() => {
@@ -134,6 +139,7 @@ export default function HomePage() {
             const opt = question.options[1];
             setMoney((m) => m + opt.delta);
             setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+            setLastConsequence(opt.consequence || null);
             setToken(opt.nextToken);
           }}
           onTertiary={() => {
@@ -141,6 +147,7 @@ export default function HomePage() {
             const opt = question.options[2];
             setMoney((m) => m + opt.delta);
             setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+            setLastConsequence(opt.consequence || null);
             setToken(opt.nextToken);
           }}
         />

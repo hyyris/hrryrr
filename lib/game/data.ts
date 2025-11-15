@@ -1,7 +1,7 @@
 import type { Question } from './types';
 import raw from './questions.json';
 
-type RawOption = { id: string; text: string; delta: number; next: string | null };
+type RawOption = { id: string; text: string; delta: number; next: string | null; consequence?: string };
 type RawGraph = {
   start: string;
   questions: Record<string, {
@@ -31,6 +31,7 @@ export function getQuestion(token: string): Question | null {
     text: o.text,
     delta: o.delta,
     nextToken: o.next ? `${o.next}|${step + 1}` : `end|${step + 1}`,
+    consequence: o.consequence,
   }));
   return { id: src.id, text: src.text, options: mapped };
 }

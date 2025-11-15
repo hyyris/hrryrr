@@ -3,6 +3,7 @@ export type Option = {
   text: string;
   delta: number;
   nextToken: string; // path string for next question
+  consequence?: string; // shown with subsequent question
 };
 
 export type Question = {

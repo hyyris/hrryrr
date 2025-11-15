@@ -3,45 +3,617 @@
   "questions": {
     "q1": {
       "id": "q1",
-      "text": "Buy coffee or save or invest?",
+      "text": "You just graduated! 🎓 Your relatives hand you €100 as a gift. Your friends spam your phone: “BROOO we’re going OUT tonight 🍾✨”.",
       "options": [
-        { "id": "q1-a", "text": "Buy a fancy coffee", "delta": -5, "next": "q2" },
-        { "id": "q1-b", "text": "Skip and save", "delta": 5, "next": "q3" },
-        { "id": "q1-c", "text": "Invest that amount", "delta": 5, "next": "q5" }
+        {
+          "id": "a",
+          "text": "Party like a legend.",
+          "consequence": "You buy drinks for everyone and attempt to crowd surf in a bar with 7 people. You wake up missing a shoe and dignity.",
+          "delta": -85,
+          "next": "q2"
+        },
+        {
+          "id": "b",
+          "text": "Celebrate modestly.",
+          "consequence": "You grab a burger and chill in the park. Ducks enjoy your fries. Vibes immaculate.",
+          "delta": -12,
+          "next": "q2"
+        },
+        {
+          "id": "c",
+          "text": "Save the money.",
+          "consequence": "Your friends call you boring, but you feel powerful like a spreadsheet magician.",
+          "delta": 0,
+          "next": "q3"
+        }
       ]
     },
+
     "q2": {
       "id": "q2",
-      "text": "Take a taxi or walk?",
+      "text": "Morning hits. Your bank balance punches harder than your hangover. You need income.",
       "options": [
-        { "id": "q2-a", "text": "Taxi ride", "delta": -20, "next": null },
-        { "id": "q2-b", "text": "Walk it off", "delta": 0, "next": "q3" }
+        {
+          "id": "a",
+          "text": "Apply for a fast food job.",
+          "consequence": "They hire you instantly. Either you’re qualified or they’re desperate. Probably both.",
+          "delta": 50,
+          "next": "q4"
+        },
+        {
+          "id": "b",
+          "text": "Sell old items online.",
+          "consequence": "You sell your ancient game console to a nostalgic collector who calls it ‘retro tech treasure.’",
+          "delta": 80,
+          "next": "q4"
+        },
+        {
+          "id": "c",
+          "text": "Do nothing and hope life sorts itself out.",
+          "consequence": "Life does NOT sort itself out. You just scroll TikTok for 6 hours straight.",
+          "delta": -10,
+          "next": "q5"
+        }
       ]
     },
+
     "q3": {
       "id": "q3",
-      "text": "Freelance gig this evening?",
+      "text": "You avoided chaos so far. Safe start. What’s next?",
       "options": [
-        { "id": "q3-a", "text": "Take the gig", "delta": 120, "next": "q4" },
-        { "id": "q3-b", "text": "Take the night off", "delta": 0, "next": null }
+        {
+          "id": "a",
+          "text": "Apply for a job.",
+          "consequence": "You submit an application while wearing pajamas. Efficient.",
+          "delta": 0,
+          "next": "q4"
+        },
+        {
+          "id": "b",
+          "text": "Invest in an index fund.",
+          "consequence": "You feel like Warren Buffett. In reality you gained absolutely nothing… yet.",
+          "delta": -20,
+          "next": "q6"
+        },
+        {
+          "id": "c",
+          "text": "Buy something small as a reward.",
+          "consequence": "You buy fancy bubble tea. It’s delicious. But now you’re broke in spirit and wallet.",
+          "delta": -8,
+          "next": "q5"
+        }
       ]
     },
+
     "q4": {
       "id": "q4",
-      "text": "Upgrade your phone?",
+      "text": "You start working and actually earning money. But work is exhausting.",
       "options": [
-        { "id": "q4-a", "text": "Yes, new phone!", "delta": -800, "next": null },
-        { "id": "q4-b", "text": "Keep the old one", "delta": 0, "next": null },
-        { "id": "q4-c", "text": "Sell old, buy used", "delta": -200, "next": null }
+        {
+          "id": "a",
+          "text": "Take extra shifts to earn more.",
+          "consequence": "You smell permanently like frying oil, but the money rolls in.",
+          "delta": 120,
+          "next": "q7"
+        },
+        {
+          "id": "b",
+          "text": "Quit after one day. Too much effort.",
+          "consequence": "You dramatically announce retirement from the workforce.",
+          "delta": -10,
+          "next": "q5"
+        },
+        {
+          "id": "c",
+          "text": "Buy a scooter to commute faster.",
+          "consequence": "You find a used scooter online, questionable quality but shiny.",
+          "delta": -170,
+          "next": "q8"
+        }
       ]
     },
+
     "q5": {
       "id": "q5",
-      "text": "Mini index fund deposit?",
+      "text": "You receive a notification: “Instant €200 loan! 0% interest for 7 days!* (*Not really)”",
       "options": [
-        { "id": "q5-a", "text": "Deposit now", "delta": 25, "next": "q3" },
-        { "id": "q5-b", "text": "Hold for later", "delta": 0, "next": "q2" },
-        { "id": "q5-c", "text": "Spend impulsively", "delta": -25, "next": null }
+        {
+          "id": "a",
+          "text": "Take the quick loan.",
+          "consequence": "That was suspiciously easy. The app’s mascot winks at you. Creepy.",
+          "delta": 200,
+          "next": "q9"
+        },
+        {
+          "id": "b",
+          "text": "Ignore and stay strong.",
+          "consequence": "You block notifications like a healthy adult.",
+          "delta": 0,
+          "next": "q6"
+        },
+        {
+          "id": "c",
+          "text": "Take loan and PARTY AGAIN.",
+          "consequence": "You become a legend at the bar. You also become financially doomed.",
+          "delta": 200,
+          "next": "q10"
+        }
+      ]
+    },
+
+    "q6": {
+      "id": "q6",
+      "text": "Your friend says: “Bro trust me, this coin will 100x. Lambo in 2 weeks.”",
+      "options": [
+        {
+          "id": "a",
+          "text": "Invest in index fund.",
+          "consequence": "You make the sound financial choice. Zero excitement. Zero stress.",
+          "delta": -50,
+          "next": "q11"
+        },
+        {
+          "id": "b",
+          "text": "Buy SHIBA-BONK-LAMBO coin.",
+          "consequence": "You stare at fluctuating numbers like it’s life or death.",
+          "delta": -70,
+          "next": "q12"
+        },
+        {
+          "id": "c",
+          "text": "Keep cash in savings.",
+          "consequence": "Boring but steady.",
+          "delta": 0,
+          "next": "q11"
+        }
+      ]
+    },
+
+    "q7": {
+      "id": "q7",
+      "text": "Bills arrive: phone plan, bus pass, food. Adulting hits hard.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pay bills responsibly.",
+          "consequence": "Boring but safe. Your inner accountant smiles.",
+          "delta": -60,
+          "next": "q11"
+        },
+        {
+          "id": "b",
+          "text": "Ignore bills and pray.",
+          "consequence": "Turns out prayer does not stop overdue fees.",
+          "delta": -90,
+          "next": "q13"
+        },
+        {
+          "id": "c",
+          "text": "Ask a friend for money.",
+          "consequence": "They say yes. Friendship strained.",
+          "delta": 40,
+          "next": "q14"
+        }
+      ]
+    },
+
+    "q8": {
+      "id": "q8",
+      "text": "Your new scooter awaits.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Ride it immediately.",
+          "consequence": "Engine dies in 3 minutes. You push it home. Passers-by laugh.",
+          "delta": -100,
+          "next": "q13"
+        },
+        {
+          "id": "b",
+          "text": "Use it to take extra shifts.",
+          "consequence": "Zoom zoom, cash cash.",
+          "delta": 90,
+          "next": "q11"
+        },
+        {
+          "id": "c",
+          "text": "Try to claim fake insurance.",
+          "consequence": "They laugh at your terrible acting. Denied.",
+          "delta": -50,
+          "next": "q13"
+        }
+      ]
+    },
+
+    "q9": {
+      "id": "q9",
+      "text": "Loan repayment is due. Additional fees appear out of nowhere.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Take another loan to cover it.",
+          "consequence": "Ah yes, the classic. Loan to pay loan. Genius plan.",
+          "delta": 150,
+          "next": "q15"
+        },
+        {
+          "id": "b",
+          "text": "Work more to pay it off.",
+          "consequence": "Your manager is thrilled, you're slightly dead inside.",
+          "delta": 70,
+          "next": "q11"
+        },
+        {
+          "id": "c",
+          "text": "Ignore messages.",
+          "consequence": "Debt collectors begin circling like financial vultures.",
+          "delta": 0,
+          "next": "q16"
+        }
+      ]
+    },
+
+    "q10": {
+      "id": "q10",
+      "text": "PARTY MAYHEM. You wake up in a different city.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Try to figure out what happened.",
+          "consequence": "You retrace steps and find a parking ticket taped to your forehead.",
+          "delta": -120,
+          "next": "q16"
+        },
+        {
+          "id": "b",
+          "text": "Realize your phone is gone.",
+          "consequence": "Stolen by a guy you arm-wrestled at 4am.",
+          "delta": -300,
+          "next": "q13"
+        },
+        {
+          "id": "c",
+          "text": "Check TikTok. You’re accidentally viral.",
+          "consequence": "Millions laughing. You might monetize this...",
+          "delta": 20,
+          "next": "q17"
+        }
+      ]
+    },
+
+    "q11": {
+      "id": "q11",
+      "text": "Unexpected event: your phone breaks.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Repair it.",
+          "consequence": "The repair guy judges your cracked screen like a crime scene.",
+          "delta": -90,
+          "next": "q18"
+        },
+        {
+          "id": "b",
+          "text": "Buy a new one.",
+          "consequence": "The salesperson hypnotizes you. You somehow buy the expensive model.",
+          "delta": -350,
+          "next": "q15"
+        },
+        {
+          "id": "c",
+          "text": "Live without a phone.",
+          "consequence": "Welcome to caveman mode. Peaceful but inconvenient.",
+          "delta": 0,
+          "next": "q19"
+        }
+      ]
+    },
+
+    "q12": {
+      "id": "q12",
+      "text": "Meme coin is moving wildly. Charts look like a rollercoaster from hell.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Panic sell.",
+          "consequence": "You lock in losses and cry softly.",
+          "delta": -50,
+          "next": "q13"
+        },
+        {
+          "id": "b",
+          "text": "Hold.",
+          "consequence": "Diamond hands engaged. You roll dice with fate.",
+          "delta": 0,
+          "next": "q20"
+        },
+        {
+          "id": "c",
+          "text": "Buy more. YOLO.",
+          "consequence": "Your gamble senses tingle. Not in a good way.",
+          "delta": -120,
+          "next": "q15"
+        }
+      ]
+    },
+
+    "q13": {
+      "id": "q13",
+      "text": "Reality slap: unexpected fine or repair cost.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Handle it responsibly.",
+          "consequence": "It hurts but adulthood is pain.",
+          "delta": -60,
+          "next": "q18"
+        },
+        {
+          "id": "b",
+          "text": "Gamble to recover money.",
+          "consequence": "Welcome to the casino. Your wallet trembles.",
+          "delta": -50,
+          "next": "q21"
+        },
+        {
+          "id": "c",
+          "text": "Borrow more money.",
+          "consequence": "Interest eats you alive.",
+          "delta": 150,
+          "next": "q15"
+        }
+      ]
+    },
+
+    "q14": {
+      "id": "q14",
+      "text": "Friend asks about the loan you owe them.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Repay immediately.",
+          "consequence": "Friendship level increases +1.",
+          "delta": -40,
+          "next": "q18"
+        },
+        {
+          "id": "b",
+          "text": "Avoid them.",
+          "consequence": "You now have both financial and social debt.",
+          "delta": 0,
+          "next": "q16"
+        },
+        {
+          "id": "c",
+          "text": "Lie about bank error.",
+          "consequence": "They absolutely do not believe you.",
+          "delta": 0,
+          "next": "q15"
+        }
+      ]
+    },
+
+    "q15": {
+      "id": "q15",
+      "text": "You are drowning in loans. The abyss stares back.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Declare bankruptcy.",
+          "consequence": "You become a warning story schools use in economics class.",
+          "delta": -800,
+          "next": null
+        },
+        {
+          "id": "b",
+          "text": "Parents bail you out.",
+          "consequence": "You owe them lifelong humiliation and chores.",
+          "delta": 200,
+          "next": null
+        },
+        {
+          "id": "c",
+          "text": "Sell belongings and try again.",
+          "consequence": "You now own 3 shirts and a spoon, but restart possible.",
+          "delta": 100,
+          "next": "q18"
+        }
+      ]
+    },
+
+    "q16": {
+      "id": "q16",
+      "text": "Debt collectors begin calling. You feel fear.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sign a repayment plan.",
+          "consequence": "Adulting intensifies.",
+          "delta": -100,
+          "next": "q18"
+        },
+        {
+          "id": "b",
+          "text": "Run away emotionally.",
+          "consequence": "You are now a legend of financial failure.",
+          "delta": -600,
+          "next": null
+        },
+        {
+          "id": "c",
+          "text": "Cry for help.",
+          "consequence": "Someone gives advice. Surprisingly helpful.",
+          "delta": 0,
+          "next": "q18"
+        }
+      ]
+    },
+
+    "q17": {
+      "id": "q17",
+      "text": "Your chaotic TikTok video goes viral.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Monetize while hot.",
+          "consequence": "You make deals with questionable energy drink brands.",
+          "delta": 300,
+          "next": "q20"
+        },
+        {
+          "id": "b",
+          "text": "Try but fail.",
+          "consequence": "People moved on. You are yesterday’s meme.",
+          "delta": -20,
+          "next": "q13"
+        },
+        {
+          "id": "c",
+          "text": "Ruin reputation.",
+          "consequence": "Yikes. You get cancelled for something you don’t remember doing.",
+          "delta": -200,
+          "next": "q16"
+        }
+      ]
+    },
+
+    "q18": {
+      "id": "q18",
+      "text": "You survived the chaos so far. What's your final move?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Save everything.",
+          "consequence": "You resist temptation like a monk.",
+          "delta": 100,
+          "next": "q22"
+        },
+        {
+          "id": "b",
+          "text": "Invest responsibly.",
+          "consequence": "Safe steady growth. No fireworks.",
+          "delta": 60,
+          "next": "q22"
+        },
+        {
+          "id": "c",
+          "text": "Buy dumb flex.",
+          "consequence": "Designer sunglasses that make you look rich but feel broke.",
+          "delta": -150,
+          "next": "q21"
+        }
+      ]
+    },
+
+    "q19": {
+      "id": "q19",
+      "text": "Living tech-free. Minimalistic life.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stay minimalist forever.",
+          "consequence": "You become a peaceful forest monk.",
+          "delta": 0,
+          "next": null
+        },
+        {
+          "id": "b",
+          "text": "Rejoin society.",
+          "consequence": "Rebuild financially like a phoenix.",
+          "delta": 20,
+          "next": "q18"
+        },
+        {
+          "id": "c",
+          "text": "Join bizarre meditation commune.",
+          "consequence": "Your only possessions are a robe and a coconut.",
+          "delta": -30,
+          "next": null
+        }
+      ]
+    },
+
+    "q20": {
+      "id": "q20",
+      "text": "Fate decides.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Coin moons or fame skyrockets — YOU WIN",
+          "consequence": "Money rains. You buy a toaster made of gold. Financial miracle.",
+          "delta": 2000,
+          "next": null
+        },
+        {
+          "id": "b",
+          "text": "Market crashes violently.",
+          "consequence": "Your investment evaporates like tears in rain.",
+          "delta": -800,
+          "next": "q13"
+        },
+        {
+          "id": "c",
+          "text": "Sell early and secure some profit.",
+          "consequence": "Smart move. You avoid disaster.",
+          "delta": 200,
+          "next": "q18"
+        }
+      ]
+    },
+
+    "q21": {
+      "id": "q21",
+      "text": "Final gamble attempt.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Win BIG by miracle",
+          "consequence": "Inexplicable divine financial intervention.",
+          "delta": 900,
+          "next": "q22"
+        },
+        {
+          "id": "b",
+          "text": "Lose everything instantly",
+          "consequence": "Your bank account is emptier than your future.",
+          "delta": -1000,
+          "next": null
+        },
+        {
+          "id": "c",
+          "text": "Leave early with something",
+          "consequence": "You walk away alive. Barely.",
+          "delta": 50,
+          "next": "q22"
+        }
+      ]
+    },
+
+    "q22": {
+      "id": "q22",
+      "text": "Final evaluation. How will history remember you?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Stable Adult Ending",
+          "consequence": "You paid bills, avoided disaster, survived adulthood. A respectable B+.",
+          "delta": 0,
+          "next": null
+        },
+        {
+          "id": "b",
+          "text": "Barely Survived Ending",
+          "consequence": "You crawl across the financial finish line wheezing. But hey, alive is alive.",
+          "delta": 0,
+          "next": null
+        },
+        {
+          "id": "c",
+          "text": "Financial Genius Ending",
+          "consequence": "You are a budgeting legend. Rumors say spreadsheets fear you.",
+          "delta": 0,
+          "next": null
+        }
       ]
     }
   }
