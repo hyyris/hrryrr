@@ -149,39 +149,41 @@ export default function HomePage() {
             )}
           </CardContent>
         </Card>
-        <ActionButtons
-          primaryLabel={question?.options?.[0]?.text}
-          secondaryLabel={question?.options?.[1]?.text}
-          tertiaryLabel={question?.options?.[2]?.text}
-          disabled={!question || !!error || loading}
-          primaryDelta={question?.options?.[0]?.delta}
-          secondaryDelta={question?.options?.[1]?.delta}
-          tertiaryDelta={question?.options?.[2]?.delta}
-          onPrimary={() => {
-            if (!question) return;
-            const opt = question.options[0];
-            setMoney((m) => m + opt.delta);
-            setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
-            setLastConsequence(opt.consequence || null);
-            setToken(opt.nextToken);
-          }}
-          onSecondary={() => {
-            if (!question) return;
-            const opt = question.options[1];
-            setMoney((m) => m + opt.delta);
-            setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
-            setLastConsequence(opt.consequence || null);
-            setToken(opt.nextToken);
-          }}
-          onTertiary={() => {
-            if (!question || !question.options[2]) return;
-            const opt = question.options[2];
-            setMoney((m) => m + opt.delta);
-            setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
-            setLastConsequence(opt.consequence || null);
-            setToken(opt.nextToken);
-          }}
-        />
+        {!loading && !error && !question ? null : (
+          <ActionButtons
+            primaryLabel={question?.options?.[0]?.text}
+            secondaryLabel={question?.options?.[1]?.text}
+            tertiaryLabel={question?.options?.[2]?.text}
+            disabled={!question || !!error || loading}
+            primaryDelta={question?.options?.[0]?.delta}
+            secondaryDelta={question?.options?.[1]?.delta}
+            tertiaryDelta={question?.options?.[2]?.delta}
+            onPrimary={() => {
+              if (!question) return;
+              const opt = question.options[0];
+              setMoney((m) => m + opt.delta);
+              setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+              setLastConsequence(opt.consequence || null);
+              setToken(opt.nextToken);
+            }}
+            onSecondary={() => {
+              if (!question) return;
+              const opt = question.options[1];
+              setMoney((m) => m + opt.delta);
+              setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+              setLastConsequence(opt.consequence || null);
+              setToken(opt.nextToken);
+            }}
+            onTertiary={() => {
+              if (!question || !question.options[2]) return;
+              const opt = question.options[2];
+              setMoney((m) => m + opt.delta);
+              setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+              setLastConsequence(opt.consequence || null);
+              setToken(opt.nextToken);
+            }}
+          />
+        )}
       </div>
     </div>
   );
