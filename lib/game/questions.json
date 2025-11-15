@@ -94,7 +94,7 @@
           "text": "Take extra shifts to earn more",
           "consequence": "You smell permanently like frying oil, but the money rolls in.",
           "delta": 120,
-          "next": "q7"
+          "next": "q26"
         },
         {
           "id": "b",
@@ -545,9 +545,9 @@
       "id": "q25",
       "text": "Friends pitch a ‘budget’ weekend trip that keeps inflating in scope.",
       "options": [
-        { "id": "a", "text": "Go but keep it cheap", "consequence": "You hostel hop and eat discount noodles.", "delta": -100, "next": "q26" },
+        { "id": "a", "text": "Go but keep it cheap", "consequence": "You hostel hop and eat discount noodles.", "delta": -100, "next": "q28" },
         { "id": "b", "text": "Upgrade everything", "consequence": "Suite, fancy meals, spontaneous excursions. Wallet whimpers.", "delta": -400, "next": "q16" },
-        { "id": "c", "text": "Skip trip, take freelance gig", "consequence": "You grind while others post sunsets.", "delta": 150, "next": "q26" }
+        { "id": "c", "text": "Skip trip, take freelance gig", "consequence": "You grind while others post sunsets.", "delta": 150, "next": "q28" }
       ]
     },
     "q42": {
@@ -575,6 +575,15 @@
         { "id": "a", "text": "Pay promptly", "consequence": "You absorb the hit and avoid penalties. Bureaucracy defeated.", "delta": -200, "next": null },
         { "id": "b", "text": "Delay & hope for clarity", "consequence": "Minor fee accrues while you ‘research’.", "delta": -40, "next": "q20" },
         { "id": "c", "text": "Misfile everything", "consequence": "Chaos triggered; auditors frown dramatically.", "delta": -350, "next": null }
+      ]
+    },
+    "q28": {
+      "id": "q28",
+      "text": "Post‑trip reality check. Income plan?",
+      "options": [
+        { "id": "a", "text": "Polish CV & apply widely", "consequence": "You line up interviews; momentum builds.", "delta": 0, "next": "q4" },
+        { "id": "b", "text": "Spin up quick side gigs", "consequence": "Small wins stack; confidence returns.", "delta": 60, "next": "q34" },
+        { "id": "c", "text": "Ignore it and chill", "consequence": "Time passes; bills do not.", "delta": -20, "next": "q31" }
       ]
     },
     "q29": {
@@ -651,9 +660,9 @@
       {"id": "c", "text": "Mario Kart budget wager", "consequence": "Rainbow Road decides rent split.", "delta": -30, "next": "q7"}
   ]},
   "q38": {"id": "q38", "text": "Forum Doom Scroll.", "options": [
-      {"id": "a", "text": "Close tab immediately", "consequence": "Discipline preserved.", "delta": 0, "next": "q26"},
-      {"id": "b", "text": "Hedge obscure ETF", "consequence": "Diversification or dilution?", "delta": -25, "next": "q26"},
-      {"id": "c", "text": "Sell half for emotions", "consequence": "Behavioral finance moment.", "delta": -10, "next": "q26"}
+    {"id": "a", "text": "Close tab immediately", "consequence": "Discipline preserved.", "delta": 0, "next": "q23"},
+    {"id": "b", "text": "Hedge obscure ETF", "consequence": "Diversification or dilution?", "delta": -25, "next": "q24"},
+    {"id": "c", "text": "Sell half for emotions", "consequence": "Behavioral finance moment.", "delta": -10, "next": "q41"}
   ]},
   "q39": {"id": "q39", "text": "Loan App Gamification.", "options": [
       {"id": "a", "text": "Disable streak badges", "consequence": "Detox from predatory UX.", "delta": 10, "next": "q15"},
