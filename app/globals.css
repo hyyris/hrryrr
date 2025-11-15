@@ -231,6 +231,19 @@
     border-radius: 0.6rem;
     backdrop-filter: blur(6px);
     box-shadow: 0 4px 12px -4px rgba(0,0,0,0.35);
+    will-change: transform, background-color;
+    transform: translateZ(0);
+    transition: background-color 240ms ease;
+  }
+  .money-badge.money-bump { animation: moneyFlash 380ms cubic-bezier(.25,.8,.35,1); background-color: hsl(var(--card) / 1); }
+  @keyframes moneyFlash {
+    0% { transform: scale(1); }
+    28% { transform: scale(1.1); }
+    60% { transform: scale(1.025); }
+    100% { transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .money-badge.money-bump { animation: none; }
   }
   .money-positive { color: hsl(140 60% 35%); }
   .money-negative { color: hsl(0 70% 50%); }

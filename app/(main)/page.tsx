@@ -108,7 +108,7 @@ export default function HomePage() {
           <h1 className="app-title">Spendocalypse</h1>
         </header>
         <Card>
-          <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>
+          <MoneyBadge money={money} moneyClass={moneyClass} formatMoney={formatMoney} />
           <CardHeader>
             <CardTitle>{question ? '' : 'Run complete'}</CardTitle>
             {question && lastConsequence && (
@@ -187,4 +187,17 @@ export default function HomePage() {
       </div>
     </div>
   );
+}
+
+function MoneyBadge({ money, moneyClass, formatMoney }: { money: number; moneyClass: string; formatMoney: (v:number)=>string }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    el.classList.remove('money-bump');
+    // Force reflow to restart animation reliably
+    void el.offsetWidth;
+    el.classList.add('money-bump');
+  }, [money]);
+  return <div ref={ref} className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>;
 }
