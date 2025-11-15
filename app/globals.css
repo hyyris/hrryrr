@@ -146,6 +146,20 @@
     margin-top: 1rem;
   }
 
+  /* Page layout: card near top on mobile, more breathing room on larger screens */
+  .layout-top {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.75rem 1rem 2rem;
+  }
+  @media (min-width: 768px) {
+    .layout-top {
+      padding-top: 3.5rem;
+    }
+  }
+
   .money-badge {
     position: absolute;
     top: 0.5rem;

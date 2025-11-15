@@ -12,7 +12,7 @@ export default function HomePage() {
   const money = 0;
   const moneyClass = money > 0 ? 'money-positive' : money < 0 ? 'money-negative' : 'money-neutral';
   return (
-    <div className="flex min-h-screen items-center justify-center p-4">
+    <div className="layout-top">
       <div className="w-full max-w-sm space-y-4">
         <Card>
           <div className={`money-badge ${moneyClass}`}>💰 <span>{money}€</span></div>
