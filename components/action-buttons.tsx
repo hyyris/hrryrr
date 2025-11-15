@@ -2,10 +2,12 @@
 
 import { Button } from '@/components/ui/button';
 
-export default function ActionButtons() {
-  function handleAction(kind: 'primary' | 'secondary') {
-    console.log('Placeholder action:', kind);
-  }
+type ActionButtonsProps = {
+  onPrimary?: () => void;
+  onSecondary?: () => void;
+};
+
+export default function ActionButtons({ onPrimary, onSecondary }: ActionButtonsProps) {
 
   function addRipple(e: React.MouseEvent<HTMLDivElement>) {
     const container = e.currentTarget as HTMLDivElement;
@@ -28,12 +30,24 @@ export default function ActionButtons() {
 
   return (
     <div className="action-stack">
-      <div className="ripple-container" onClick={(e) => { addRipple(e); handleAction('primary'); }}>
+      <div
+        className="ripple-container"
+        onClick={(e) => {
+          addRipple(e);
+          onPrimary?.();
+        }}
+      >
         <Button className="w-full button-tall" variant="default">
           Primary action
         </Button>
       </div>
-      <div className="ripple-container" onClick={(e) => { addRipple(e); handleAction('secondary'); }}>
+      <div
+        className="ripple-container"
+        onClick={(e) => {
+          addRipple(e);
+          onSecondary?.();
+        }}
+      >
         <Button className="w-full button-tall" variant="outline">
           Secondary
         </Button>

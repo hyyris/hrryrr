@@ -1,21 +1,23 @@
+"use client";
+import { useState } from 'react';
 import ActionButtons from '@/components/action-buttons';
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 
 export default function HomePage() {
-  const money = 0;
+  const [money, setMoney] = useState(0);
   const moneyClass = money > 0 ? 'money-positive' : money < 0 ? 'money-negative' : 'money-neutral';
+  const formatMoney = (v: number) => v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   return (
     <div className="layout-top">
       <div className="w-full max-w-sm space-y-4">
         <Card>
-          <div className={`money-badge ${moneyClass}`}>💰 <span>{money}€</span></div>
+          <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>
           <CardHeader>
             <CardTitle>hrryrr</CardTitle>
             <CardDescription>
@@ -28,7 +30,10 @@ export default function HomePage() {
             </p>
           </CardContent>
         </Card>
-        <ActionButtons />
+        <ActionButtons
+          onPrimary={() => setMoney((m) => m + 100)}
+          onSecondary={() => setMoney((m) => m - 100)}
+        />
       </div>
     </div>
   );
