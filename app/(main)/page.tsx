@@ -56,13 +56,13 @@ export default function HomePage() {
     let mid: string;
     let edge: string;
     if (money > 0) {
-      center = 'hsl(174 90% 65%)';
-      mid = 'hsl(196 92% 72%)';
-      edge = 'hsl(230 90% 10%)';
+      center = 'hsl(140 70% 50%)';
+      mid = 'hsl(152 80% 60%)';
+      edge = 'hsl(165 90% 10%)';
     } else if (money < 0) {
-      center = 'hsl(343 84% 55%)';
-      mid = 'hsl(270 84% 52%)';
-      edge = 'hsl(250 30% 12%)';
+      center = 'hsl(0 78% 55%)';
+      mid = 'hsl(8 82% 62%)';
+      edge = 'hsl(345 60% 12%)';
     } else {
       center = 'hsl(0 0% 8%)';
       mid = 'hsl(0 0% 12%)';
