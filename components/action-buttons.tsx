@@ -38,7 +38,7 @@ export default function ActionButtons({ onPrimary, onSecondary, primaryLabel = '
     const y = e.clientY - rect.top;
     const el = document.createElement('span');
     el.className = 'delta-float';
-    const sign = delta > 0 ? '+' : '';
+  const sign = delta > 0 ? '+' : delta < 0 ? '-' : '';
     const formatted = Math.abs(delta).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     el.textContent = `${sign}${formatted}€`;
     el.style.left = `${x}px`;
