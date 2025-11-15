@@ -111,7 +111,7 @@ export default function HomePage() {
           <MoneyBadge money={money} moneyClass={moneyClass} formatMoney={formatMoney} />
           <CardHeader>
             <CardTitle>{question ? '' : 'Run complete'}</CardTitle>
-            {question && lastConsequence && (
+            {lastConsequence && (
               <p className="consequence-text text-sm text-muted-foreground font-medium">{lastConsequence}</p>
             )}
             <CardDescription>
