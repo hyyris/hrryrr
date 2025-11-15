@@ -408,7 +408,7 @@
           "id": "b",
           "text": "Parents bail you out.",
           "consequence": "You owe them lifelong humiliation and chores.",
-          "delta": 200,
+          "delta": 0,
           "next": null
         },
         {
