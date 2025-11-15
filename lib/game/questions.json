@@ -535,29 +535,11 @@
 
     "q20": {
       "id": "q20",
-      "text": "Fate decides.",
+      "text": "Final volatility spike: feeds scream ‘MOON SOON’ while skeptics say peak. Choose your exit strategy.",
       "options": [
-        {
-          "id": "a",
-          "text": "Coin moons or fame skyrockets — YOU WIN",
-          "consequence": "Money rains. You buy a toaster made of gold. Financial miracle.",
-          "delta": 2000,
-          "next": null
-        },
-        {
-          "id": "b",
-          "text": "Market crashes violently.",
-          "consequence": "Your investment evaporates like tears in rain.",
-          "delta": -800,
-          "next": "q13"
-        },
-        {
-          "id": "c",
-          "text": "Sell early and secure some profit.",
-          "consequence": "Smart move. You avoid disaster.",
-          "delta": 200,
-          "next": "q41"
-        }
+        { "id": "a", "text": "Diamond hands: full HODL to the moon", "consequence": "You hodl through the rug pull. Portfolio vaporizes while you post morale memes.", "delta": -1200, "next": null },
+        { "id": "b", "text": "Take partial profits, leave a ‘moon bag’", "consequence": "You secure gains, keep a lottery fragment, sleep slightly better.", "delta": 600, "next": "q41" },
+        { "id": "c", "text": "Lock in calm profit now", "consequence": "You bank gains, breathe, and sidestep incoming chaos.", "delta": 200, "next": "q41" }
       ]
     },
 
