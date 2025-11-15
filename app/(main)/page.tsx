@@ -27,7 +27,6 @@ export default function HomePage() {
   const [lastConsequence, setLastConsequence] = useState<string | null>(null);
   const [selections, setSelections] = useState<Array<{ questionId: string; optionId: string; delta: number }>>([]);
   const moodAnimRef = useRef<number | null>(null);
-  const moodJitterRef = useRef<number | null>(null);
   const lastTargetsRef = useRef<{center:number[];mid:number[];edge:number[]}|null>(null);
 
   useEffect(() => {
@@ -65,36 +64,40 @@ export default function HomePage() {
         ? { center: to(0,78,55), mid: to(8,82,62), edge: to(345,60,12), x:38, y:35 }
         : { center: to(200,92,80), mid: to(210,94,86), edge: to(220,96,96), x:50, y:55 };
 
-    if (moodJitterRef.current) { clearInterval(moodJitterRef.current); moodJitterRef.current = null; }
-    if (moodAnimRef.current) { clearInterval(moodAnimRef.current); moodAnimRef.current = null; }
+    if (moodAnimRef.current) { 
+      cancelAnimationFrame(moodAnimRef.current); moodAnimRef.current = null;
+    }
 
     const start = lastTargetsRef.current || targets; // first run jumps immediately
-    const steps = 24;
-    let i = 0;
-    moodAnimRef.current = window.setInterval(() => {
-      i++;
-      const t = Math.min(i/steps,1);
-      const ease = t*t*(3-2*t); // smoothstep
-      const lerp = (a:number,b:number)=>a+(b-a)*ease;
-      const mix = (src:number[], dst:number[]) => [lerp(src[0],dst[0]), lerp(src[1],dst[1]), lerp(src[2],dst[2])];
-      const c = mix(start.center, targets.center);
-      const m = mix(start.mid, targets.mid);
-      const e = mix(start.edge, targets.edge);
+    const duration = 600; // ms
+    const startTime = performance.now();
+    const ease = (t:number) => t*t*(3-2*t); // smoothstep
+    const lerp = (a:number,b:number,t:number)=>a+(b-a)*t;
+    // Avoid hue cross-over (yellow/orange) by snapping hue to target and only tweening S and L
+    const mixKeepHue = (src:number[], dst:number[], t:number) => [dst[0], lerp(src[1],dst[1],t), lerp(src[2],dst[2],t)];
+
+    const step = () => {
+      const now = performance.now();
+      const raw = Math.min((now - startTime) / duration, 1);
+      const t = ease(raw);
+      const c = mixKeepHue(start.center, targets.center, t);
+      const m = mixKeepHue(start.mid, targets.mid, t);
+      const e = mixKeepHue(start.edge, targets.edge, t);
       root.style.setProperty('--mood-center', `hsl(${c[0]} ${c[1]}% ${c[2]}%)`);
       root.style.setProperty('--mood-mid', `hsl(${m[0]} ${m[1]}% ${m[2]}%)`);
       root.style.setProperty('--mood-edge', `hsl(${e[0]} ${e[1]}% ${e[2]}%)`);
-      const baseX = targets.x;
-      const baseY = targets.y;
-      root.style.setProperty('--mood-x', `${baseX}%`);
-      root.style.setProperty('--mood-y', `${baseY}%`);
-      if (t === 1) {
-        clearInterval(moodAnimRef.current!);
+      root.style.setProperty('--mood-x', `${targets.x}%`);
+      root.style.setProperty('--mood-y', `${targets.y}%`);
+      if (raw < 1) {
+        moodAnimRef.current = requestAnimationFrame(step);
+      } else {
         lastTargetsRef.current = { center: targets.center, mid: targets.mid, edge: targets.edge };
+        moodAnimRef.current = null;
       }
-    }, 1000/steps);
+    };
+    moodAnimRef.current = requestAnimationFrame(step);
     return () => {
-      if (moodAnimRef.current) clearInterval(moodAnimRef.current);
-      if (moodJitterRef.current) clearInterval(moodJitterRef.current);
+      if (moodAnimRef.current) cancelAnimationFrame(moodAnimRef.current);
     };
   }, [money]);
   return (
