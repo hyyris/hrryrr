@@ -48,7 +48,8 @@
   .card-root {
     border-radius: 0.75rem;
     overflow: hidden;
-    padding-inline: 0.5rem;
+    padding-inline: 1.5rem;
+    padding-bottom: 1rem;
     box-sizing: border-box;
     width: 100%;
     position: relative;
