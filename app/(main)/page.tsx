@@ -104,7 +104,7 @@ export default function HomePage() {
           <CardHeader>
             <CardTitle>{question ? '' : ''}</CardTitle>
             {question && lastConsequence && (
-              <p className="text-sm text-muted-foreground font-medium">{lastConsequence}</p>
+              <p className="consequence-text text-sm text-muted-foreground font-medium">{lastConsequence}</p>
             )}
             <CardDescription>
               {question ? question.text : ''}

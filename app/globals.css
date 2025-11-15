@@ -244,6 +244,10 @@
   .delta-float[data-type='gain'] { color: hsl(140 70% 45%); }
   .delta-float[data-type='loss'] { color: hsl(0 75% 55%); }
   .delta-float[data-type='neutral'] { color: hsl(var(--card-foreground)); }
+
+  .consequence-text {
+    font-style: italic;
+  }
 }
 
 .button-spinner {
