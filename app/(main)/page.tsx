@@ -134,7 +134,7 @@ export default function HomePage() {
                     return 'Total financial whiplash. May your next run be wiser.';
                   })()}
                 </p>
-                <p className="text-muted-foreground text-sm">Final score: {formatMoney(money)}€</p>
+                <p className="text-muted-foreground text-sm">Final score: <span className={moneyClass}>{formatMoney(money)}€</span></p>
                 <Button onClick={() => {
                   setMoney(100);
                   setSelections([]);
