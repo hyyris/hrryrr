@@ -138,7 +138,7 @@ export default function HomePage() {
                   setToken('');
                   setRestart((n) => n + 1);
                 }}>
-                  Try again
+                  <span className="inline-flex items-center gap-1"><span>Try again</span><span aria-hidden>↺</span></span>
                 </Button>
               </div>
             )}
