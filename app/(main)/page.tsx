@@ -100,6 +100,8 @@ export default function HomePage() {
           primaryLabel={question?.options?.[0]?.text}
           secondaryLabel={question?.options?.[1]?.text}
           disabled={!question || !!error || loading}
+          primaryDelta={question?.options?.[0]?.delta}
+          secondaryDelta={question?.options?.[1]?.delta}
           onPrimary={() => {
             if (!question) return;
             const opt = question.options[0];
