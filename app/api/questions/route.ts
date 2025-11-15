@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { MAX_STEPS, QUESTIONS } from '@/lib/game/data';
+import { MAX_STEPS, getQuestion } from '@/lib/game/data';
 import type { DoneResponse, QuestionResponse } from '@/lib/game/types';
 
 export async function GET(req: NextRequest) {
@@ -12,10 +12,7 @@ export async function GET(req: NextRequest) {
     return Response.json(done);
   }
 
-  const question = QUESTIONS[path];
-  if (!question) {
-    return new Response('Question not found', { status: 404 });
-  }
+  const question = getQuestion(path);
 
   const isLast = step === MAX_STEPS - 1;
   const payload: QuestionResponse = {
