@@ -27,6 +27,8 @@
 
   /* Radii (medium, shadcn-like) */
   --radius: 0.75rem;
+  /* Fixed card width token */
+  --card-width: 22rem;
   }
 
   body {
@@ -40,6 +42,8 @@
     border-radius: 0.75rem;
     overflow: hidden;
     padding-inline: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
     position: relative;
     background-color: hsl(var(--card));
     color: hsl(var(--card-foreground));
@@ -160,6 +164,13 @@
     }
   }
 
+  /* Keep card and buttons at a consistent visual width */
+  .stack-fixed {
+    width: var(--card-width);
+    max-width: calc(100% - 2rem);
+    margin-inline: auto;
+  }
+
   .money-badge {
     position: absolute;
     top: 0.5rem;
@@ -181,6 +192,8 @@
 
   .ripple-container {
     position: relative;
+    display: block;
+    width: 100%;
     overflow: hidden;
     border-radius: inherit;
   }

@@ -5,9 +5,12 @@ import { Button } from '@/components/ui/button';
 type ActionButtonsProps = {
   onPrimary?: () => void;
   onSecondary?: () => void;
+  primaryLabel?: string;
+  secondaryLabel?: string;
+  disabled?: boolean;
 };
 
-export default function ActionButtons({ onPrimary, onSecondary }: ActionButtonsProps) {
+export default function ActionButtons({ onPrimary, onSecondary, primaryLabel = 'Primary action', secondaryLabel = 'Secondary', disabled }: ActionButtonsProps) {
 
   function addRipple(e: React.MouseEvent<HTMLDivElement>) {
     const container = e.currentTarget as HTMLDivElement;
@@ -37,8 +40,8 @@ export default function ActionButtons({ onPrimary, onSecondary }: ActionButtonsP
           onPrimary?.();
         }}
       >
-        <Button className="w-full button-tall" variant="default">
-          Primary action
+        <Button className="w-full button-tall" variant="default" disabled={disabled}>
+          {primaryLabel}
         </Button>
       </div>
       <div
@@ -48,8 +51,8 @@ export default function ActionButtons({ onPrimary, onSecondary }: ActionButtonsP
           onSecondary?.();
         }}
       >
-        <Button className="w-full button-tall" variant="outline">
-          Secondary
+        <Button className="w-full button-tall" variant="outline" disabled={disabled}>
+          {secondaryLabel}
         </Button>
       </div>
     </div>
