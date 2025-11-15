@@ -27,7 +27,32 @@
 
   /* Radii (medium, shadcn-like) */
   --radius: 0.75rem;
-  /* Fixed card width token */
+  .app-header {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .app-title {
+    font-family: "Momo Trust Display", "Rubik", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: hsl(var(--card-foreground));
+    text-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  }
+
+  .app-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 0.5rem;
+    object-fit: cover;
+  }
+
   --card-width: 22rem;
   /* Initial neutral mood gradient values (light blue) */
   --mood-center: hsl(200 92% 80%);

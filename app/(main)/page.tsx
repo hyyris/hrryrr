@@ -101,6 +101,9 @@ export default function HomePage() {
     <div className="layout-top">
       <div className="mood-overlay" aria-hidden />
       <div className="stack-fixed space-y-4">
+        <header className="app-header">
+          <h1 className="app-title">Spendocalypse</h1>
+        </header>
         <Card>
           <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>
           <CardHeader>
