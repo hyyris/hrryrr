@@ -266,15 +266,15 @@
         },
         {
           "id": "b",
-          "text": "Realize your phone is gone",
-          "consequence": "Stolen by a guy you arm-wrestled at 4am.",
-          "delta": -300,
+          "text": "Reach for your phone to call a cab",
+          "consequence": "Your hands shake from a night of partying; the phone feels as heavy as your poor choices.",
+          "delta": 0,
           "next": "q42"
         },
         {
           "id": "c",
-          "text": "Check TikTok. You’re accidentally viral",
-          "consequence": "Millions laughing. You might monetize this...",
+          "text": "Check TikTok",
+          "consequence": "You’re accidentally viral! Millions laughing. You might monetize this...",
           "delta": 20,
           "next": "q17"
         }
