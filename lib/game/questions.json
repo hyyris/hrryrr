@@ -297,7 +297,7 @@
           "text": "Buy a new one",
           "consequence": "The salesperson hypnotizes you. You somehow buy the expensive model.",
           "delta": -350,
-          "next": "q15"
+          "next": "q44"
         },
         {
           "id": "c",
@@ -332,7 +332,7 @@
           "text": "Buy more. YOLO",
           "consequence": "Your gamble senses tingle. Not in a good way.",
           "delta": -120,
-          "next": "q15"
+          "next": "q44"
         }
       ]
     },
@@ -360,7 +360,7 @@
           "text": "Book repair with buy‑now‑pay‑later",
           "consequence": "Problem gone; future bill grows fangs.",
           "delta": 150,
-          "next": "q15"
+          "next": "q44"
         }
       ]
     },
@@ -388,7 +388,7 @@
           "text": "Lie about bank error",
           "consequence": "They absolutely do not believe you.",
           "delta": 0,
-          "next": "q15"
+          "next": "q44"
         }
       ]
     },
@@ -609,7 +609,7 @@
       "text": "Payment failure warnings start appearing.",
       "options": [
         { "id": "a", "text": "Consolidate to annual plan", "consequence": "You reduce churn but still feel subscription shackles.", "delta": -50, "next": "q41" },
-        { "id": "b", "text": "Panic borrow to cover subs", "consequence": "Debt for digital perks. Bold.", "delta": 100, "next": "q15" },
+        { "id": "b", "text": "Panic borrow to cover subs", "consequence": "Debt for digital perks. Bold.", "delta": 100, "next": "q44" },
         { "id": "c", "text": "Accept trap & delete budgeting app", "consequence": "You drift into recurring charge oblivion.", "delta": -300, "next": null }
       ]
     },
@@ -665,9 +665,9 @@
     {"id": "c", "text": "Sell half for emotions", "consequence": "Behavioral finance moment.", "delta": -10, "next": "q41"}
   ]},
   "q39": {"id": "q39", "text": "Loan App Gamification.", "options": [
-      {"id": "a", "text": "Disable streak badges", "consequence": "Detox from predatory UX.", "delta": 10, "next": "q15"},
-      {"id": "b", "text": "Chase Elite Borrower status", "consequence": "Shiny badge, worse balance.", "delta": -60, "next": "q15"},
-      {"id": "c", "text": "Post screenshot ironically", "consequence": "Internet gives 3 pity likes.", "delta": 0, "next": "q15"}
+    {"id": "a", "text": "Disable streak badges", "consequence": "Detox from predatory UX.", "delta": 10, "next": "q44"},
+    {"id": "b", "text": "Chase Elite Borrower status", "consequence": "Shiny badge, worse balance.", "delta": -60, "next": "q44"},
+    {"id": "c", "text": "Post screenshot ironically", "consequence": "Internet gives 3 pity likes.", "delta": 0, "next": "q44"}
   ]},
   "q40": {"id": "q40", "text": "Brand Deal Negotiation.", "options": [
       {"id": "a", "text": "Accept chaotic energy drink deal", "consequence": "Clause requires weekly backflips.", "delta": 150, "next": "q20"},
@@ -679,6 +679,16 @@
       {"id": "b", "text": "Buy novelty smart mug", "consequence": "It glows to remind you of regret.", "delta": -40, "next": "q18"},
       {"id": "c", "text": "Purchase Productivity Mega Bundle", "consequence": "You now own 12 unused courses.", "delta": -120, "next": "q18"}
   ]}
+
+  ,"q44": {
+    "id": "q44",
+    "text": "Monthly payment avalanche: interest hike, fees, surprise maintenance—all at once.",
+    "options": [
+      {"id": "a", "text": "Make minimum payments", "consequence": "You slow the bleeding but balances swell.", "delta": -120, "next": "q15"},
+      {"id": "b", "text": "Pay aggressively now", "consequence": "Wallet scorched; future interest shrinks.", "delta": -260, "next": "q15"},
+      {"id": "c", "text": "Ignore it this month", "consequence": "Penalties stack like Jenga collapse.", "delta": -400, "next": "q15"}
+    ]
+  }
 
   }
 }
