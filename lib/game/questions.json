@@ -16,8 +16,8 @@
           "id": "b",
           "text": "Celebrate modestly.",
           "consequence": "You grab a burger and chill in the park. Ducks enjoy your fries. Vibes immaculate.",
-          "delta": -12,
-          "next": "q2"
+          "delta": -15,
+          "next": "q29"
         },
         {
           "id": "c",
@@ -73,7 +73,7 @@
           "text": "Invest in an index fund.",
           "consequence": "You feel like Warren Buffett. In reality you gained absolutely nothing… yet.",
           "delta": -20,
-          "next": "q6"
+          "next": "q32"
         },
         {
           "id": "c",
@@ -150,7 +150,7 @@
           "text": "Invest in index fund.",
           "consequence": "You make the sound financial choice. Zero excitement. Zero stress.",
           "delta": -50,
-          "next": "q11"
+          "next": "q24"
         },
         {
           "id": "b",
@@ -164,7 +164,7 @@
           "text": "Keep cash in savings.",
           "consequence": "Boring but steady.",
           "delta": 0,
-          "next": "q11"
+          "next": "q23"
         }
       ]
     },
@@ -486,14 +486,14 @@
           "text": "Save everything.",
           "consequence": "You resist temptation like a monk.",
           "delta": 100,
-          "next": "q22"
+          "next": null
         },
         {
           "id": "b",
           "text": "Invest responsibly.",
           "consequence": "Safe steady growth. No fireworks.",
           "delta": 60,
-          "next": "q22"
+          "next": null
         },
         {
           "id": "c",
@@ -570,7 +570,7 @@
           "text": "Win BIG by miracle",
           "consequence": "Inexplicable divine financial intervention.",
           "delta": 900,
-          "next": "q22"
+          "next": null
         },
         {
           "id": "b",
@@ -584,37 +584,110 @@
           "text": "Leave early with something",
           "consequence": "You walk away alive. Barely.",
           "delta": 50,
-          "next": "q22"
-        }
-      ]
-    },
-
-    "q22": {
-      "id": "q22",
-      "text": "Final evaluation. How will history remember you?",
-      "options": [
-        {
-          "id": "a",
-          "text": "Stable Adult Ending",
-          "consequence": "You paid bills, avoided disaster, survived adulthood. A respectable B+.",
-          "delta": 0,
-          "next": null
-        },
-        {
-          "id": "b",
-          "text": "Barely Survived Ending",
-          "consequence": "You crawl across the financial finish line wheezing. But hey, alive is alive.",
-          "delta": 0,
-          "next": null
-        },
-        {
-          "id": "c",
-          "text": "Financial Genius Ending",
-          "consequence": "You are a budgeting legend. Rumors say spreadsheets fear you.",
-          "delta": 0,
           "next": null
         }
       ]
     }
+
+    ,"q23": {
+      "id": "q23",
+      "text": "You start a strict ‘Savings Challenge’ month. Temptations appear daily.",
+      "options": [
+        { "id": "a", "text": "Stick to the challenge perfectly", "consequence": "You pack lunches, brew own coffee, ascend to frugal monk status.", "delta": 80, "next": "q25" },
+        { "id": "b", "text": "Allow a tiny treat", "consequence": "One pastry won’t kill the budget… probably.", "delta": -15, "next": "q25" },
+        { "id": "c", "text": "Blow it on impulse spree", "consequence": "Challenge forgotten; courier drivers learn your name.", "delta": -120, "next": "q13" }
+      ]
+    }
+
+    ,"q24": {
+      "id": "q24",
+      "text": "Your index fund wobbles mildly. Boring charts vs thrilling noise online.",
+      "options": [
+        { "id": "a", "text": "Add more calmly", "consequence": "You double down; future you nods approvingly.", "delta": -50, "next": "q26" },
+        { "id": "b", "text": "Diversify modestly", "consequence": "You sprinkle into another fund. Portfolio feels balanced-ish.", "delta": -30, "next": "q26" },
+        { "id": "c", "text": "Swap into meme coin", "consequence": "Boredom defeated. Stress invited.", "delta": -70, "next": "q12" }
+      ]
+    }
+
+    ,"q25": {
+      "id": "q25",
+      "text": "Friends pitch a ‘budget’ weekend trip that keeps inflating in scope.",
+      "options": [
+        { "id": "a", "text": "Go but keep it cheap", "consequence": "You hostel hop and eat discount noodles.", "delta": -100, "next": "q26" },
+        { "id": "b", "text": "Upgrade everything", "consequence": "Suite, fancy meals, spontaneous excursions. Wallet whimpers.", "delta": -400, "next": "q16" },
+        { "id": "c", "text": "Skip trip, take freelance gig", "consequence": "You grind while others post sunsets.", "delta": 150, "next": "q26" }
+      ]
+    }
+
+    ,"q26": {
+      "id": "q26",
+      "text": "Job review cycle. You consider your approach to a raise.",
+      "options": [
+        { "id": "a", "text": "Prepare data & ask", "consequence": "You present charts; manager impressed (and slightly scared).", "delta": 120, "next": "q27" },
+        { "id": "b", "text": "Say nothing", "consequence": "Silence strategy yields… exactly nothing.", "delta": 0, "next": "q27" },
+        { "id": "c", "text": "Hint you might leave", "consequence": "Risky move; partial bump, mild tension.", "delta": 50, "next": "q13" }
+      ]
+    }
+
+    ,"q27": {
+      "id": "q27",
+      "text": "Tax letter arrives with confusing adjustments.",
+      "options": [
+        { "id": "a", "text": "Pay promptly", "consequence": "You absorb the hit and avoid penalties. Bureaucracy defeated.", "delta": -200, "next": null },
+        { "id": "b", "text": "Delay & hope for clarity", "consequence": "Minor fee accrues while you ‘research’.", "delta": -40, "next": "q20" },
+        { "id": "c", "text": "Misfile everything", "consequence": "Chaos triggered; auditors frown dramatically.", "delta": -350, "next": null }
+      ]
+    }
+
+    ,"q29": {
+      "id": "q29",
+      "text": "Your modest celebration unlocked a wave of ‘free trial’ emails. Subscriptions loom.",
+      "options": [
+        { "id": "a", "text": "Cancel obvious useless trials", "consequence": "You purge the worst offenders before billing hits.", "delta": -10, "next": "q30" },
+        { "id": "b", "text": "Keep them ‘for now’", "consequence": "Auto-renew seeds planted. Wallet tension rises.", "delta": -60, "next": "q30" },
+        { "id": "c", "text": "Add a fancy AI subscription too", "consequence": "Surely this one pays for itself. Surely.", "delta": -100, "next": "q30" }
+      ]
+    }
+
+    ,"q30": {
+      "id": "q30",
+      "text": "Streaming, gaming, niche newsletters — all billing this week.",
+      "options": [
+        { "id": "a", "text": "Full audit & cut list", "consequence": "You spreadsheet the chaos and reclaim a bit of cash.", "delta": 20, "next": "q6" },
+        { "id": "b", "text": "Ignore autopays", "consequence": "Your bank quietly bleeds.", "delta": -120, "next": "q31" },
+        { "id": "c", "text": "Upgrade all tiers for ‘value’", "consequence": "Value feels like burning money faster.", "delta": -250, "next": "q31" }
+      ]
+    }
+
+    ,"q31": {
+      "id": "q31",
+      "text": "Payment failure warnings start appearing.",
+      "options": [
+        { "id": "a", "text": "Consolidate to annual plan", "consequence": "You reduce churn but still feel subscription shackles.", "delta": -50, "next": "q18" },
+        { "id": "b", "text": "Panic borrow to cover subs", "consequence": "Debt for digital perks. Bold.", "delta": 100, "next": "q15" },
+        { "id": "c", "text": "Accept trap & delete budgeting app", "consequence": "You drift into recurring charge oblivion.", "delta": -300, "next": null }
+      ]
+    }
+
+    ,"q32": {
+      "id": "q32",
+      "text": "Roommate is late on rent and dishes form geological layers.",
+      "options": [
+        { "id": "a", "text": "Calm talk about accountability", "consequence": "They nod; maybe progress.", "delta": 0, "next": "q33" },
+        { "id": "b", "text": "Passive-aggressive meme notes", "consequence": "Humor applied. Effect uncertain.", "delta": -10, "next": "q33" },
+        { "id": "c", "text": "Cover their share temporarily", "consequence": "You buy time at personal cost.", "delta": -80, "next": "q33" }
+      ]
+    }
+
+    ,"q33": {
+      "id": "q33",
+      "text": "Tension shifts. Outcome hinges on your follow-up.",
+      "options": [
+        { "id": "a", "text": "Draft shared expense doc", "consequence": "Structure reduces friction.", "delta": 30, "next": "q7" },
+        { "id": "b", "text": "Find new roommate fast", "consequence": "Minor churn cost, cleaner restart.", "delta": -20, "next": "q18" },
+        { "id": "c", "text": "Let drama explode & move out", "consequence": "You both flee. Financial reset messy.", "delta": -150, "next": null }
+      ]
+    }
+
   }
 }
