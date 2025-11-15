@@ -273,6 +273,7 @@
 
   .consequence-text {
     font-style: italic;
+    color: hsl(215 15% 40%);
   }
 }
 

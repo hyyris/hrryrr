@@ -119,8 +119,7 @@ export default function HomePage() {
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col items-center gap-4">
-            {loading && <p className="text-muted-foreground">Loading…</p>}
-            {error && <p className="text-red-500 text-sm">{error}</p>}
+            {error && <p className="text-sm">{error}</p>}
             {!loading && !error && !question && (
               <div className="flex flex-col items-center gap-3">
                 <p className="text-foreground text-center text-base">
