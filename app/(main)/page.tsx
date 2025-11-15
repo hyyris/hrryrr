@@ -50,8 +50,35 @@ export default function HomePage() {
       ignore = true;
     };
   }, [token]);
+  useEffect(() => {
+    const root = document.documentElement;
+    let center: string;
+    let mid: string;
+    let edge: string;
+    if (money > 0) {
+      center = 'hsl(174 90% 65%)';
+      mid = 'hsl(196 92% 72%)';
+      edge = 'hsl(230 90% 10%)';
+    } else if (money < 0) {
+      center = 'hsl(343 84% 55%)';
+      mid = 'hsl(270 84% 52%)';
+      edge = 'hsl(250 30% 12%)';
+    } else {
+      center = 'hsl(0 0% 8%)';
+      mid = 'hsl(0 0% 12%)';
+      edge = 'hsl(0 0% 0%)';
+    }
+    root.style.setProperty('--mood-center', center);
+    root.style.setProperty('--mood-mid', mid);
+    root.style.setProperty('--mood-edge', edge);
+    const x = money > 0 ? '62%' : money < 0 ? '38%' : '50%';
+    const y = money > 0 ? '65%' : money < 0 ? '35%' : '55%';
+    root.style.setProperty('--mood-x', x);
+    root.style.setProperty('--mood-y', y);
+  }, [money]);
   return (
     <div className="layout-top">
+      <div className="mood-overlay" aria-hidden />
       <div className="stack-fixed space-y-4">
         <Card>
           <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>

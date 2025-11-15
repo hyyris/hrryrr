@@ -29,7 +29,18 @@
   --radius: 0.75rem;
   /* Fixed card width token */
   --card-width: 22rem;
+  /* Initial neutral mood gradient values */
+  --mood-center: 0 0% 8%;
+  --mood-mid: 0 0% 12%;
+  --mood-edge: 0 0% 0%;
+  --mood-x: 50%;
+  --mood-y: 55%;
   }
+  @property --mood-center { syntax: '<color>'; inherits: true; initial-value: hsl(0 0% 8%); }
+  @property --mood-mid { syntax: '<color>'; inherits: true; initial-value: hsl(0 0% 12%); }
+  @property --mood-edge { syntax: '<color>'; inherits: true; initial-value: hsl(0 0% 0%); }
+  @property --mood-x { syntax: '<percentage>'; inherits: true; initial-value: 50%; }
+  @property --mood-y { syntax: '<percentage>'; inherits: true; initial-value: 55%; }
 
   body {
     min-height: 100vh;
@@ -169,6 +180,17 @@
     width: var(--card-width);
     max-width: calc(100% - 2rem);
     margin-inline: auto;
+  }
+
+  .mood-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mood-x) var(--mood-y), var(--mood-center) 0%, var(--mood-mid) 55%, var(--mood-edge) 100%);
+    filter: blur(90px) saturate(120%);
+    opacity: 0.55;
+    transition: --mood-center 1s ease, --mood-mid 1s ease, --mood-edge 1s ease, --mood-x 1s ease, --mood-y 1s ease, opacity 0.8s ease;
   }
 
   .money-badge {
