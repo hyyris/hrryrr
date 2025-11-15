@@ -205,7 +205,7 @@
           "id": "a",
           "text": "Ride it immediately.",
           "consequence": "Engine dies in 3 minutes. You push it home. Passers-by laugh.",
-          "delta": -100,
+          "delta": 0,
           "next": "q13"
         },
         {
