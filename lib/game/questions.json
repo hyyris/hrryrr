@@ -7,21 +7,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Party like a legend.",
+          "text": "Party like a legend",
           "consequence": "You buy drinks for everyone and attempt to crowd surf in a bar with 7 people. You wake up missing a shoe and dignity.",
           "delta": -85,
           "next": "q2"
         },
         {
           "id": "b",
-          "text": "Celebrate modestly.",
+          "text": "Celebrate modestly",
           "consequence": "You grab a burger and chill in the park. Ducks enjoy your fries. Vibes immaculate.",
           "delta": -15,
           "next": "q29"
         },
         {
           "id": "c",
-          "text": "Save the money.",
+          "text": "Save the money",
           "consequence": "Your friends call you boring, but you feel powerful like a spreadsheet magician.",
           "delta": 0,
           "next": "q3"
@@ -35,21 +35,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Apply for a fast food job.",
+          "text": "Apply for a fast food job",
           "consequence": "They hire you instantly. Either you’re qualified or they’re desperate. Probably both.",
           "delta": 50,
           "next": "q4"
         },
         {
           "id": "b",
-          "text": "Sell old items online.",
+          "text": "Sell old items online",
           "consequence": "You sell your ancient game console to a nostalgic collector who calls it ‘retro tech treasure.’",
           "delta": 80,
           "next": "q34"
         },
         {
           "id": "c",
-          "text": "Do nothing and hope life sorts itself out.",
+          "text": "Do nothing and hope life sorts itself out",
           "consequence": "Life does NOT sort itself out. You just scroll TikTok for 6 hours straight.",
           "delta": -10,
           "next": "q5"
@@ -63,21 +63,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Apply for a job.",
+          "text": "Apply for a job",
           "consequence": "You submit an application while wearing pajamas. Efficient.",
           "delta": 0,
           "next": "q4"
         },
         {
           "id": "b",
-          "text": "Invest in an index fund.",
+          "text": "Invest in an index fund",
           "consequence": "You feel like Warren Buffett. In reality you gained absolutely nothing… yet.",
           "delta": -20,
           "next": "q32"
         },
         {
           "id": "c",
-          "text": "Buy something small as a reward.",
+          "text": "Buy something small as a reward",
           "consequence": "You buy fancy bubble tea. It’s delicious. But now you’re broke in spirit and wallet.",
           "delta": -8,
           "next": "q5"
@@ -91,21 +91,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Take extra shifts to earn more.",
+          "text": "Take extra shifts to earn more",
           "consequence": "You smell permanently like frying oil, but the money rolls in.",
           "delta": 120,
           "next": "q7"
         },
         {
           "id": "b",
-          "text": "Quit after one day. Too much effort.",
+          "text": "Quit after one day. Too much effort",
           "consequence": "You dramatically announce retirement from the workforce.",
           "delta": -10,
           "next": "q5"
         },
         {
           "id": "c",
-          "text": "Buy a scooter to commute faster.",
+          "text": "Buy a scooter to commute faster",
           "consequence": "You find a used scooter online, questionable quality but shiny.",
           "delta": -170,
           "next": "q8"
@@ -119,21 +119,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Take the quick loan.",
+          "text": "Take the quick loan",
           "consequence": "That was suspiciously easy. The app’s mascot winks at you. Creepy.",
           "delta": 200,
           "next": "q9"
         },
         {
           "id": "b",
-          "text": "Ignore and stay strong.",
+          "text": "Ignore and stay strong",
           "consequence": "You block notifications like a healthy adult.",
           "delta": 0,
           "next": "q6"
         },
         {
           "id": "c",
-          "text": "Take loan and PARTY AGAIN.",
+          "text": "Take loan and PARTY AGAIN",
           "consequence": "You become a legend at the bar. You also become financially doomed.",
           "delta": 200,
           "next": "q10"
@@ -147,21 +147,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Invest in index fund.",
+          "text": "Invest in index fund",
           "consequence": "You make the sound financial choice. Zero excitement. Zero stress.",
           "delta": -50,
           "next": "q24"
         },
         {
           "id": "b",
-          "text": "Buy SHIBA-BONK-LAMBO coin.",
+          "text": "Buy SHIBA-BONK-LAMBO coin",
           "consequence": "You stare at fluctuating numbers like it’s life or death.",
           "delta": -70,
           "next": "q12"
         },
         {
           "id": "c",
-          "text": "Keep cash in savings.",
+          "text": "Keep cash in savings",
           "consequence": "Boring but steady.",
           "delta": 0,
           "next": "q23"
@@ -175,21 +175,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Pay bills responsibly.",
+          "text": "Pay bills responsibly",
           "consequence": "Boring but safe. Your inner accountant smiles.",
           "delta": -60,
           "next": "q11"
         },
         {
           "id": "b",
-          "text": "Ignore bills and pray.",
+          "text": "Ignore bills and pray",
           "consequence": "Turns out prayer does not stop overdue fees.",
           "delta": -90,
           "next": "q13"
         },
         {
           "id": "c",
-          "text": "Ask a friend for money.",
+          "text": "Ask a friend for money",
           "consequence": "They say yes. Friendship strained.",
           "delta": 40,
           "next": "q14"
@@ -203,21 +203,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Ride it immediately.",
+          "text": "Ride it immediately",
           "consequence": "Engine dies in 3 minutes. You push it home. Passers-by laugh.",
           "delta": 0,
           "next": "q42"
         },
         {
           "id": "b",
-          "text": "Use it to take extra shifts.",
+          "text": "Use it to take extra shifts",
           "consequence": "Zoom zoom, cash cash.",
           "delta": 90,
           "next": "q11"
         },
         {
           "id": "c",
-          "text": "Try to claim fake insurance.",
+          "text": "Try to claim fake insurance",
           "consequence": "They laugh at your terrible acting. Denied.",
           "delta": -50,
           "next": "q42"
@@ -231,21 +231,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Take another loan to cover it.",
+          "text": "Take another loan to cover it",
           "consequence": "Ah yes, the classic. Loan to pay loan. Genius plan.",
           "delta": 150,
           "next": "q39"
         },
         {
           "id": "b",
-          "text": "Work more to pay it off.",
+          "text": "Work more to pay it off",
           "consequence": "Your manager is thrilled, you're slightly dead inside.",
           "delta": 70,
           "next": "q11"
         },
         {
           "id": "c",
-          "text": "Ignore messages.",
+          "text": "Ignore messages",
           "consequence": "Debt collectors begin circling like financial vultures.",
           "delta": 0,
           "next": "q16"
@@ -259,21 +259,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Try to figure out what happened.",
+          "text": "Try to figure out what happened",
           "consequence": "You retrace steps and find a parking ticket taped to your forehead.",
           "delta": -120,
           "next": "q16"
         },
         {
           "id": "b",
-          "text": "Realize your phone is gone.",
+          "text": "Realize your phone is gone",
           "consequence": "Stolen by a guy you arm-wrestled at 4am.",
           "delta": -300,
           "next": "q42"
         },
         {
           "id": "c",
-          "text": "Check TikTok. You’re accidentally viral.",
+          "text": "Check TikTok. You’re accidentally viral",
           "consequence": "Millions laughing. You might monetize this...",
           "delta": 20,
           "next": "q17"
@@ -287,21 +287,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Repair it.",
+          "text": "Repair it",
           "consequence": "The repair guy judges your cracked screen like a crime scene.",
           "delta": -90,
           "next": "q41"
         },
         {
           "id": "b",
-          "text": "Buy a new one.",
+          "text": "Buy a new one",
           "consequence": "The salesperson hypnotizes you. You somehow buy the expensive model.",
           "delta": -350,
           "next": "q15"
         },
         {
           "id": "c",
-          "text": "Live without a phone.",
+          "text": "Live without a phone",
           "consequence": "Welcome to caveman mode. Peaceful but inconvenient.",
           "delta": 0,
           "next": "q19"
@@ -315,21 +315,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Panic sell.",
+          "text": "Panic sell",
           "consequence": "You lock in losses and cry softly.",
           "delta": -50,
           "next": "q13"
         },
         {
           "id": "b",
-          "text": "Hold.",
+          "text": "Hold",
           "consequence": "Diamond hands engaged. You roll dice with fate.",
           "delta": 0,
           "next": "q20"
         },
         {
           "id": "c",
-          "text": "Buy more. YOLO.",
+          "text": "Buy more. YOLO",
           "consequence": "Your gamble senses tingle. Not in a good way.",
           "delta": -120,
           "next": "q15"
@@ -371,21 +371,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Repay immediately.",
+          "text": "Repay immediately",
           "consequence": "Friendship level increases +1.",
           "delta": -40,
           "next": "q41"
         },
         {
           "id": "b",
-          "text": "Avoid them.",
+          "text": "Avoid them",
           "consequence": "You now have both financial and social debt.",
           "delta": 0,
           "next": "q16"
         },
         {
           "id": "c",
-          "text": "Lie about bank error.",
+          "text": "Lie about bank error",
           "consequence": "They absolutely do not believe you.",
           "delta": 0,
           "next": "q15"
@@ -399,21 +399,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Declare bankruptcy.",
+          "text": "Declare bankruptcy",
           "consequence": "You become a warning story schools use in economics class.",
           "delta": -800,
           "next": null
         },
         {
           "id": "b",
-          "text": "Parents bail you out.",
+          "text": "Parents bail you out",
           "consequence": "You owe them lifelong humiliation and chores.",
           "delta": 0,
           "next": null
         },
         {
           "id": "c",
-          "text": "Sell belongings and try again.",
+          "text": "Sell belongings and try again",
           "consequence": "You now own 3 shirts and a spoon, but restart is possible.",
           "delta": 100,
           "next": "q41"
@@ -427,21 +427,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Sign a repayment plan.",
+          "text": "Sign a repayment plan",
           "consequence": "Adulting intensifies.",
           "delta": -100,
           "next": "q41"
         },
         {
           "id": "b",
-          "text": "Run away emotionally.",
+          "text": "Run away emotionally",
           "consequence": "You are now a legend of financial failure.",
           "delta": -600,
           "next": null
         },
         {
           "id": "c",
-          "text": "Cry for help.",
+          "text": "Cry for help",
           "consequence": "Someone gives advice. Surprisingly helpful.",
           "delta": 0,
           "next": "q41"
@@ -455,21 +455,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Monetize while hot.",
+          "text": "Monetize while hot",
           "consequence": "You make deals with questionable energy drink brands.",
           "delta": 300,
           "next": "q40"
         },
         {
           "id": "b",
-          "text": "Try but fail.",
+          "text": "Try but fail",
           "consequence": "People moved on. You are yesterday’s meme.",
           "delta": -20,
           "next": "q13"
         },
         {
           "id": "c",
-          "text": "Ruin reputation.",
+          "text": "Ruin reputation",
           "consequence": "Yikes. You get cancelled for something you don’t remember doing.",
           "delta": -200,
           "next": "q16"
@@ -483,21 +483,21 @@
       "options": [
         {
           "id": "a",
-          "text": "Save everything.",
+          "text": "Save everything",
           "consequence": "You resist temptation like a monk.",
           "delta": 100,
           "next": null
         },
         {
           "id": "b",
-          "text": "Invest responsibly.",
+          "text": "Invest responsibly",
           "consequence": "Safe steady growth. No fireworks.",
           "delta": 60,
           "next": null
         },
         {
           "id": "c",
-          "text": "Buy dumb flex.",
+          "text": "Buy dumb flex",
           "consequence": "Designer sunglasses that make you look rich but feel broke. Final splurge ends your run.",
           "delta": -150,
           "next": null
@@ -511,7 +511,7 @@
       "options": [
         { "id": "a", "text": "Stay minimalist forever", "consequence": "You become a peaceful forest monk.", "delta": 0, "next": null },
         { "id": "b", "text": "Rejoin society", "consequence": "You plug back in cautiously.", "delta": -20, "next": "q41" },
-        { "id": "c", "text": "Join bizarre meditation commune.", "consequence": "Your only possessions are a robe and a coconut.", "delta": -30, "next": null }
+        { "id": "c", "text": "Join bizarre meditation commune", "consequence": "Your only possessions are a robe and a coconut.", "delta": -30, "next": null }
       ]
     },
     "q20": {
