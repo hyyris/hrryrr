@@ -45,7 +45,7 @@
           "text": "Sell old items online.",
           "consequence": "You sell your ancient game console to a nostalgic collector who calls it ‘retro tech treasure.’",
           "delta": 80,
-          "next": "q4"
+          "next": "q34"
         },
         {
           "id": "c",
@@ -686,6 +686,26 @@
         { "id": "a", "text": "Draft shared expense doc", "consequence": "Structure reduces friction.", "delta": 30, "next": "q7" },
         { "id": "b", "text": "Find new roommate fast", "consequence": "Minor churn cost, cleaner restart.", "delta": -20, "next": "q18" },
         { "id": "c", "text": "Let drama explode & move out", "consequence": "You both flee. Financial reset messy.", "delta": -150, "next": null }
+      ]
+    }
+
+    ,"q34": {
+      "id": "q34",
+      "text": "Resale momentum builds. Your room is half empty, listings active everywhere.",
+      "options": [
+        { "id": "a", "text": "Curate only high-value items", "consequence": "You skip junk; margins improve.", "delta": 90, "next": "q35" },
+        { "id": "b", "text": "Sell sentimental heirloom anyway", "consequence": "Cash spikes, mild existential regret.", "delta": 140, "next": "q35" },
+        { "id": "c", "text": "Buy more random stuff to flip", "consequence": "Inventory risk returns immediately.", "delta": -70, "next": "q35" }
+      ]
+    }
+
+    ,"q35": {
+      "id": "q35",
+      "text": "Buyer messages flood in. Time management cracking.",
+      "options": [
+        { "id": "a", "text": "Automate replies & ship fast", "consequence": "Efficiency surge; micro-business vibes.", "delta": 80, "next": "q7" },
+        { "id": "b", "text": "Procrastinate; ship late", "consequence": "Ratings drop; stress rises.", "delta": -40, "next": "q16" },
+        { "id": "c", "text": "Fall for elaborate payment scam", "consequence": "Funds vanish into the void.", "delta": -180, "next": null }
       ]
     }
 
