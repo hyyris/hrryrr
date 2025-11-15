@@ -581,7 +581,7 @@
       "id": "q29",
       "text": "Your modest celebration unlocked a wave of ‘free trial’ emails. Subscriptions loom.",
       "options": [
-        { "id": "a", "text": "Cancel obvious useless trials", "consequence": "You purge the worst offenders before billing hits.", "delta": -10, "next": "q30" },
+        { "id": "a", "text": "Cancel obvious useless trials", "consequence": "You purge the worst offenders before billing hits.", "delta": 0, "next": "q30" },
         { "id": "b", "text": "Keep them ‘for now’", "consequence": "Auto-renew seeds planted. Wallet tension rises.", "delta": -60, "next": "q30" },
         { "id": "c", "text": "Add a fancy AI subscription too", "consequence": "Surely this one pays for itself. Surely.", "delta": -100, "next": "q30" }
       ]
