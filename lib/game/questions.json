@@ -353,7 +353,7 @@
           "text": "Gamble to recover money.",
           "consequence": "Welcome to the casino. Your wallet trembles.",
           "delta": -50,
-          "next": "q21"
+          "next": "q20"
         },
         {
           "id": "c",
@@ -498,9 +498,9 @@
         {
           "id": "c",
           "text": "Buy dumb flex.",
-          "consequence": "Designer sunglasses that make you look rich but feel broke.",
+          "consequence": "Designer sunglasses that make you look rich but feel broke. Final splurge ends your run.",
           "delta": -150,
-          "next": "q21"
+          "next": null
         }
       ]
     },
@@ -561,35 +561,8 @@
       ]
     },
 
-    "q21": {
-      "id": "q21",
-      "text": "Final gamble attempt.",
-      "options": [
-        {
-          "id": "a",
-          "text": "Win BIG by miracle",
-          "consequence": "Inexplicable divine financial intervention.",
-          "delta": 900,
-          "next": null
-        },
-        {
-          "id": "b",
-          "text": "Lose everything instantly",
-          "consequence": "Your bank account is emptier than your future.",
-          "delta": -1000,
-          "next": null
-        },
-        {
-          "id": "c",
-          "text": "Leave early with something",
-          "consequence": "You walk away alive. Barely.",
-          "delta": 50,
-          "next": null
-        }
-      ]
-    }
-
-    ,"q23": {
+    
+  "q23": {
       "id": "q23",
       "text": "You start a strict ‘Savings Challenge’ month. Temptations appear daily.",
       "options": [
