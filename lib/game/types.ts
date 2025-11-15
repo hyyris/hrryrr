@@ -8,7 +8,7 @@ export type Option = {
 export type Question = {
   id: string;
   text: string;
-  options: [Option, Option]; // always 2 for now
+  options: Option[]; // 2 or 3 options
 };
 
 export type QuestionResponse = {

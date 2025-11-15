@@ -117,9 +117,11 @@ export default function HomePage() {
         <ActionButtons
           primaryLabel={question?.options?.[0]?.text}
           secondaryLabel={question?.options?.[1]?.text}
+          tertiaryLabel={question?.options?.[2]?.text}
           disabled={!question || !!error || loading}
           primaryDelta={question?.options?.[0]?.delta}
           secondaryDelta={question?.options?.[1]?.delta}
+          tertiaryDelta={question?.options?.[2]?.delta}
           onPrimary={() => {
             if (!question) return;
             const opt = question.options[0];
@@ -130,6 +132,13 @@ export default function HomePage() {
           onSecondary={() => {
             if (!question) return;
             const opt = question.options[1];
+            setMoney((m) => m + opt.delta);
+            setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
+            setToken(opt.nextToken);
+          }}
+          onTertiary={() => {
+            if (!question || !question.options[2]) return;
+            const opt = question.options[2];
             setMoney((m) => m + opt.delta);
             setSelections((arr) => [...arr, { questionId: question.id, optionId: opt.id, delta: opt.delta }]);
             setToken(opt.nextToken);

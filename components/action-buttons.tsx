@@ -5,14 +5,17 @@ import { Button } from '@/components/ui/button';
 type ActionButtonsProps = {
   onPrimary?: () => void;
   onSecondary?: () => void;
+  onTertiary?: () => void;
   primaryLabel?: string;
   secondaryLabel?: string;
+  tertiaryLabel?: string;
   disabled?: boolean;
   primaryDelta?: number;
   secondaryDelta?: number;
+  tertiaryDelta?: number;
 };
 
-export default function ActionButtons({ onPrimary, onSecondary, primaryLabel = 'Primary action', secondaryLabel = 'Secondary', disabled, primaryDelta, secondaryDelta }: ActionButtonsProps) {
+export default function ActionButtons({ onPrimary, onSecondary, onTertiary, primaryLabel = 'Primary action', secondaryLabel = 'Secondary', tertiaryLabel = 'Tertiary', disabled, primaryDelta, secondaryDelta, tertiaryDelta }: ActionButtonsProps) {
 
   function addRipple(e: React.MouseEvent<HTMLDivElement>, host: HTMLDivElement) {
     const container = host.querySelector('.ripple-container') as HTMLDivElement | null;
@@ -80,6 +83,23 @@ export default function ActionButtons({ onPrimary, onSecondary, primaryLabel = '
           </Button>
         </div>
       </div>
+      {tertiaryLabel && (
+        <div
+          className="delta-host"
+          onClick={(e) => {
+            const host = e.currentTarget as HTMLDivElement;
+            addRipple(e, host);
+            addDelta(e, host, tertiaryDelta);
+            onTertiary?.();
+          }}
+        >
+          <div className="ripple-container">
+            <Button className="w-full button-tall" variant="outline" disabled={disabled}>
+              {tertiaryLabel}
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,48 @@
+{
+  "start": "q1",
+  "questions": {
+    "q1": {
+      "id": "q1",
+      "text": "Buy coffee or save or invest?",
+      "options": [
+        { "id": "q1-a", "text": "Buy a fancy coffee", "delta": -5, "next": "q2" },
+        { "id": "q1-b", "text": "Skip and save", "delta": 5, "next": "q3" },
+        { "id": "q1-c", "text": "Invest that amount", "delta": 5, "next": "q5" }
+      ]
+    },
+    "q2": {
+      "id": "q2",
+      "text": "Take a taxi or walk?",
+      "options": [
+        { "id": "q2-a", "text": "Taxi ride", "delta": -20, "next": null },
+        { "id": "q2-b", "text": "Walk it off", "delta": 0, "next": "q3" }
+      ]
+    },
+    "q3": {
+      "id": "q3",
+      "text": "Freelance gig this evening?",
+      "options": [
+        { "id": "q3-a", "text": "Take the gig", "delta": 120, "next": "q4" },
+        { "id": "q3-b", "text": "Take the night off", "delta": 0, "next": null }
+      ]
+    },
+    "q4": {
+      "id": "q4",
+      "text": "Upgrade your phone?",
+      "options": [
+        { "id": "q4-a", "text": "Yes, new phone!", "delta": -800, "next": null },
+        { "id": "q4-b", "text": "Keep the old one", "delta": 0, "next": null },
+        { "id": "q4-c", "text": "Sell old, buy used", "delta": -200, "next": null }
+      ]
+    },
+    "q5": {
+      "id": "q5",
+      "text": "Mini index fund deposit?",
+      "options": [
+        { "id": "q5-a", "text": "Deposit now", "delta": 25, "next": "q3" },
+        { "id": "q5-b", "text": "Hold for later", "delta": 0, "next": "q2" },
+        { "id": "q5-c", "text": "Spend impulsively", "delta": -25, "next": null }
+      ]
+    }
+  }
+}
