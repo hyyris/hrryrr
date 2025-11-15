@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from 'react';
 import ActionButtons from '@/components/action-buttons';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
@@ -16,6 +17,7 @@ export default function HomePage() {
   const [token, setToken] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [restart, setRestart] = useState(0);
   const [question, setQuestion] = useState<null | {
     id: string;
     text: string;
@@ -53,7 +55,7 @@ export default function HomePage() {
     return () => {
       ignore = true;
     };
-  }, [token]);
+  }, [token, restart]);
   useEffect(() => {
     const root = document.documentElement;
     const to = (h:number,s:number,l:number)=>[h,s,l];
@@ -102,7 +104,7 @@ export default function HomePage() {
         <Card>
           <div className={`money-badge ${moneyClass}`}>💰 <span>{formatMoney(money)}€</span></div>
           <CardHeader>
-            <CardTitle>{question ? '' : ''}</CardTitle>
+            <CardTitle>{question ? '' : 'Run complete'}</CardTitle>
             {question && lastConsequence && (
               <p className="consequence-text text-sm text-muted-foreground font-medium">{lastConsequence}</p>
             )}
@@ -114,7 +116,31 @@ export default function HomePage() {
             {loading && <p className="text-muted-foreground">Loading…</p>}
             {error && <p className="text-red-500 text-sm">{error}</p>}
             {!loading && !error && !question && (
-              <p className="text-foreground text-center">All done! Final score: {formatMoney(money)}€</p>
+              <div className="flex flex-col items-center gap-3">
+                <p className="text-foreground text-center text-base">
+                  {(() => {
+                    if (money >= 1000) return 'Legendary run. You broke the simulation.';
+                    if (money >= 500) return 'You thrived. Spreadsheet gods salute you.';
+                    if (money >= 200) return 'Solid finish. Calm gains, clear mind.';
+                    if (money >= 50) return 'You survived and saved. Respectable.';
+                    if (money >= 0) return 'Barely afloat, but afloat. Learnings secured.';
+                    if (money >= -100) return 'Ouch. Recoverable chaos.';
+                    return 'Total financial whiplash. May your next run be wiser.';
+                  })()}
+                </p>
+                <p className="text-muted-foreground text-sm">Final score: {formatMoney(money)}€</p>
+                <Button onClick={() => {
+                  setMoney(100);
+                  setSelections([]);
+                  setLastConsequence(null);
+                  setError(null);
+                  setQuestion(null);
+                  setToken('');
+                  setRestart((n) => n + 1);
+                }}>
+                  Try again
+                </Button>
+              </div>
             )}
           </CardContent>
         </Card>
