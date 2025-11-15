@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/card';
 
 export default function HomePage() {
-  const [money, setMoney] = useState(0);
+  const [money, setMoney] = useState(100);
   const moneyClass = money > 0 ? 'money-positive' : money < 0 ? 'money-negative' : 'money-neutral';
   const formatMoney = (v: number) => v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
   const [token, setToken] = useState('');
