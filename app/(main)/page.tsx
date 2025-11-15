@@ -59,7 +59,7 @@ export default function HomePage() {
   useEffect(() => {
     const root = document.documentElement;
     const to = (h:number,s:number,l:number)=>[h,s,l];
-    const targets = money > 0
+    const targets = money > 100
       ? { center: to(140,70,50), mid: to(152,80,60), edge: to(165,90,10), x:62, y:65 }
       : money < 0
         ? { center: to(0,78,55), mid: to(8,82,62), edge: to(345,60,12), x:38, y:35 }
