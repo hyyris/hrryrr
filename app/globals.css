@@ -55,6 +55,47 @@
       hsl(174 96% 58%) 100%
     );
   }
+
+  /* Shared button visuals aligned with Card styling */
+  .button-root {
+    border-radius: 0.5rem; /* slightly less rounded than Card */
+    border: 2px solid hsl(270 84% 52%);
+  }
+
+  .button-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+  .button-primary:hover {
+    background-color: hsl(var(--primary) / 0.9);
+  }
+
+  .button-tall {
+    padding-block: 1.25rem;
+  }
+
+  /* Vertical stack spacing utility: 1rem gap and space above */
+  .action-stack {
+    margin-top: 1rem;
+  }
+  .action-stack > * + * {
+    margin-top: 1rem;
+  }
+
+  .ripple-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: inherit;
+  }
+  .click-ripple {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 9999px;
+    background-color: currentColor;
+    opacity: 0.25;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple-wave 600ms ease-out forwards;
+  }
 }
 
 .button-spinner {
@@ -70,5 +111,16 @@
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes ripple-wave {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
   }
 }
