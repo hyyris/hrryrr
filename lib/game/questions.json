@@ -414,7 +414,7 @@
         {
           "id": "c",
           "text": "Sell belongings and try again.",
-          "consequence": "You now own 3 shirts and a spoon, but restart possible.",
+          "consequence": "You now own 3 shirts and a spoon, but restart is possible.",
           "delta": 100,
           "next": "q41"
         }
