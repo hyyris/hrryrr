@@ -1,6 +1,15 @@
 {
   "start": "q1",
   "questions": {
+    "q0": {
+      "id": "q0",
+      "text": "You just won a drone at Junction! 🚁 Fellow hackers spam your chat: ‘BROOO drone demo + afterparty tonight 🍾✨’.",
+      "options": [
+        { "id": "a", "text": "Party like a legend", "consequence": "You buy drinks for everyone and attempt to crowd surf in a bar with 7 people. You wake up missing a shoe and dignity.", "delta": -85, "next": "q2" },
+        { "id": "b", "text": "Ship a tiny post‑win demo", "consequence": "You polish code; hype builds, wallet unchanged.", "delta": 0, "next": "q29" },
+        { "id": "c", "text": "Network like a swag vacuum", "consequence": "You orbit sponsor booths, harvest free merch, sticker armor, and 37 fresh LinkedIn connects.", "delta": 20, "next": "q3" }
+      ]
+    },
     "q1": {
       "id": "q1",
       "text": "You just graduated! 🎓 Your relatives hand you €100 as a gift. Your friends spam your phone: “BROOO we’re going OUT tonight 🍾✨”.",

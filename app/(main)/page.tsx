@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import ActionButtons from '@/components/action-buttons';
 import { Button } from '@/components/ui/button';
 import {
@@ -11,10 +12,12 @@ import {
 } from '@/components/ui/card';
 
 export default function HomePage() {
-  const [money, setMoney] = useState(100);
+  const pathname = usePathname();
+  const isJunction = pathname === '/junction';
+  const [money, setMoney] = useState(() => isJunction ? 0 : 100);
   const moneyClass = money > 0 ? 'money-positive' : money < 0 ? 'money-negative' : 'money-neutral';
   const formatMoney = (v: number) => v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-  const [token, setToken] = useState('');
+  const [token, setToken] = useState(() => isJunction ? 'q0|0' : '');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [restart, setRestart] = useState(0);
@@ -135,12 +138,12 @@ export default function HomePage() {
                 </p>
                 <p className="text-muted-foreground text-sm">Final score: <span className={moneyClass}>{formatMoney(money)}€</span></p>
                 <Button onClick={() => {
-                  setMoney(100);
+                  setMoney(isJunction ? 0 : 100);
                   setSelections([]);
                   setLastConsequence(null);
                   setError(null);
                   setQuestion(null);
-                  setToken('');
+                  setToken(isJunction ? 'q0|0' : '');
                   setRestart((n) => n + 1);
                 }}>
                   <span className="inline-flex items-center gap-1"><span>Try again</span><span aria-hidden>↺</span></span>
